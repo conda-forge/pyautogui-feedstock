@@ -14,14 +14,16 @@ Summary: A cross-platform module for GUI automation for human beings. Control th
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyautogui-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyautogui-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyautogui-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyautogui-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyautogui-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyautogui-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pyautogui-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pyautogui-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pyautogui-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pyautogui-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pyautogui-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pyautogui-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyautogui/badges/version.svg)](https://anaconda.org/conda-forge/pyautogui)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyautogui/badges/downloads.svg)](https://anaconda.org/conda-forge/pyautogui)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyautogui-green.svg)](https://anaconda.org/conda-forge/pyautogui) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyautogui.svg)](https://anaconda.org/conda-forge/pyautogui) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyautogui.svg)](https://anaconda.org/conda-forge/pyautogui) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyautogui.svg)](https://anaconda.org/conda-forge/pyautogui) |
 
 Installing pyautogui
 ====================
