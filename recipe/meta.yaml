@@ -11,7 +11,7 @@ source:
   sha256: f6732a87d2a19fe99155cf37a5ddbbaeefd68bd11f69404ee857359cdf62b2d8
 
 build:
-  number: 0
+  number: 1000
   script:
     # https://github.com/asweigart/pyautogui/pull/197
     - python setup.py install  --single-version-externally-managed --record=record.txt  # [not linux]
