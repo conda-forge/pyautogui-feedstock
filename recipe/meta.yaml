@@ -14,13 +14,13 @@ build:
   number: 1000
   script:
     # https://github.com/asweigart/pyautogui/pull/197
-    - python setup.py install  --single-version-externally-managed --record=record.txt  # [not linux]
-    - DISPLAY=localhost:1.0 xvfb-run python setup.py install  --single-version-externally-managed --record=record.txt  # [linux]
+    - "{{ PYTHON }} -m pip install . -vv"  # [not linux]
+    - DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
     - python-xlib  # [linux]
     - pyobjc-framework-quartz  # [osx]
   run:
