@@ -1,4 +1,4 @@
-{% set version = "0.9.39" %}
+{% set version = "0.9.40" %}
 {% set name = "PyAutoGUI" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 source:
   fn: PyAutoGUI-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f6732a87d2a19fe99155cf37a5ddbbaeefd68bd11f69404ee857359cdf62b2d8
+  sha256: 6bc7c03ab5bda9dc97bc60ece4411361e29888af22a78247bb6a1ed8aa058f57
 
 build:
   number: 1000
