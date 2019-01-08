@@ -14,6 +14,9 @@ build:
   number: 1000
   script:
     - "{{ PYTHON }} -m pip install . -vv"  # [not linux]
+    - echo "PATH=${PATH}"  # [linux]
+    - echo "BUILD_PREFIX=${BUILD_PREFIX}"  # [linux]
+    - ls -l ${BUILD_PREFIX}/bin  # [linux]
     - DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
 
 requirements:
