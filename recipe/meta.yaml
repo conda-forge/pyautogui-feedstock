@@ -41,8 +41,7 @@ about:
   home: https://github.com/asweigart/pyautogui
   license: BSD 3-Clause
   license_family: BSD
-  # https://github.com/asweigart/pyautogui/pull/196
-  #license_file: LICENSE.txt
+  license_file: LICENSE.txt
   summary: A cross-platform module for GUI automation for human beings. Control the keyboard and mouse from a Python script.
 
 extra:
