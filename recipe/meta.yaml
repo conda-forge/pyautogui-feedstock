@@ -26,6 +26,7 @@ requirements:
     - python
     - pymsgbox
     - pytweening
+    # https://github.com/asweigart/pyscreeze/issues/46
     - pyscreeze !=0.1.20
     - python-xlib  # [linux]
     - pyobjc-framework-quartz  # [osx]
