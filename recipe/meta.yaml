@@ -17,8 +17,6 @@ build:
     - DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
 
 requirements:
-  build:
-    - {{ cdt('xorg-x11-server-xvfb') }}  # [linux]
   host:
     - python
     - pip
