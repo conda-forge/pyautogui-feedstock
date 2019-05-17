@@ -11,7 +11,7 @@ source:
   sha256: d9a42733505a18d6aaa4ca93445ac853cb44bf50ea4719a768d52973bfa16d2b
 
 build:
-  number: 0
+  number: 1
   script:
     - "{{ PYTHON }} -m pip install . -vv"  # [not linux]
     - DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
@@ -26,8 +26,7 @@ requirements:
     - python
     - pymsgbox
     - pytweening
-    # https://github.com/asweigart/pyscreeze/issues/46
-    - pyscreeze !=0.1.20
+    - pyscreeze
     - python-xlib  # [linux]
     - pyobjc-framework-quartz  # [osx]
 
