@@ -22,6 +22,7 @@ requirements:
     - pip
     - python-xlib  # [linux]
     - pyobjc-framework-quartz  # [osx]
+
   run:
     - python
     - pymsgbox
