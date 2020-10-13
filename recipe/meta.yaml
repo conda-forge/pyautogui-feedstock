@@ -11,7 +11,7 @@ source:
   sha256: e91a25c1cdf826e7d0581775b5fbe47f7e12af79e0eb9dc3e1488ba99f2e0c60
 
 build:
-  number: 0
+  number: 1
   script:
     - "{{ PYTHON }} -m pip install . -vv"  # [not linux]
     - DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
