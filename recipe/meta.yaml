@@ -1,4 +1,4 @@
-{% set version = "0.9.48" %}
+{% set version = "0.9.53" %}
 {% set name = "PyAutoGUI" %}
 
 package:
@@ -8,13 +8,13 @@ package:
 source:
   fn: PyAutoGUI-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e91a25c1cdf826e7d0581775b5fbe47f7e12af79e0eb9dc3e1488ba99f2e0c60
+  sha256: d31de8f712218d90be7fc98091fce1a12a3e9196e0c814eb9afd73bb2ec97035
 
 build:
-  number: 2
+  number: 0
   script:
-    - "{{ PYTHON }} -m pip install . -vv"  # [not linux]
-    - DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
+    - {{ PYTHON }} -m pip install . -vv    # [not linux]
+    - DISPLAY=localhost: 1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
 
 requirements:
   host:
@@ -35,7 +35,7 @@ test:
   imports:
     - pyautogui  # [not linux]
   commands:
-    - DISPLAY=localhost:1.0 xvfb-run python -c "import pyautogui"  # [linux]
+    - DISPLAY=localhost: 1.0 xvfb-run python -c "import pyautogui"  # [linux]
 
 about:
   home: https://github.com/asweigart/pyautogui
