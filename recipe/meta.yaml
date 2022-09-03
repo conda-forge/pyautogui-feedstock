@@ -1,13 +1,12 @@
+{% set name = "pyautogui" %}
 {% set version = "0.9.53" %}
-{% set name = "PyAutoGUI" %}
 
 package:
-  name: pyautogui
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: PyAutoGUI-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyAutoGUI-{{ version }}.tar.gz
   sha256: d31de8f712218d90be7fc98091fce1a12a3e9196e0c814eb9afd73bb2ec97035
 
 build:
@@ -18,29 +17,34 @@ build:
 
 requirements:
   host:
-    - python
     - pip
+    - python >=3.0
     - python-xlib  # [linux]
     - pyobjc-framework-quartz  # [osx]
 
   run:
-    - python
+    - mouseinfo
+    - pygetwindow >=0.0.5
     - pymsgbox
-    - pytweening
-    - pyscreeze
-    - python-xlib  # [linux]
+    - pyobjc-core  # [osx]
     - pyobjc-framework-quartz  # [osx]
+    - pyscreeze >=0.1.21
+    - python >=3.0
+    - pytweening
+    - python-xlib >=1.0.1
 
 test:
   imports:
     - pyautogui  # [not linux]
   commands:
     - DISPLAY=localhost: 1.0 xvfb-run python -c "import pyautogui"  # [linux]
+    - pip check
+  requres:
+    - pip
 
 about:
   home: https://github.com/asweigart/pyautogui
-  license: BSD 3-Clause
-  license_family: BSD
+  license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: A cross-platform module for GUI automation for human beings. Control the keyboard and mouse from a Python script.
 
