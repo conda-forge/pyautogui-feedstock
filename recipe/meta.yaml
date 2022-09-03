@@ -39,7 +39,7 @@ test:
   commands:
     - DISPLAY=localhost: 1.0 xvfb-run python -c "import pyautogui"  # [linux]
     - pip check
-  requres:
+  requires:
     - pip
 
 about:
