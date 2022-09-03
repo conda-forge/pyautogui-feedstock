@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.0
+    - python
     - python-xlib  # [linux]
     - pyobjc-framework-quartz  # [osx]
 
@@ -29,7 +29,7 @@ requirements:
     - pyobjc-core  # [osx]
     - pyobjc-framework-quartz  # [osx]
     - pyscreeze >=0.1.21
-    - python >=3.0
+    - python
     - pytweening
     - python-xlib >=1.0.1
 
