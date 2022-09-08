@@ -3,7 +3,7 @@ About pyautogui
 
 Home: https://github.com/asweigart/pyautogui
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyautogui-feedstock/blob/main/LICENSE.txt)
 
