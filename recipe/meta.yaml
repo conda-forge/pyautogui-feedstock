@@ -40,7 +40,6 @@ test:
     - pyautogui  # [not linux]
   commands:
     - DISPLAY=localhost: 1.0 xvfb-run python -c "import pyautogui"  # [linux]
-    - pip check
     - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
