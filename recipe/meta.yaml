@@ -24,7 +24,7 @@ requirements:
 
   run:
     - mouseinfo
-    - pygetwindow >=0.0.5
+    - pygetwindow >=0.0.5  # [not linux]
     - pymsgbox
     - pyobjc-core  # [osx]
     - pyobjc-framework-quartz  # [osx]
