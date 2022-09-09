@@ -14,7 +14,7 @@ build:
   number: 0
   script:
     - {{ PYTHON }} -m pip install . -vv    # [not linux]
-    - DISPLAY=localhost: 1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
+    - DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
 
 requirements:
   host:
