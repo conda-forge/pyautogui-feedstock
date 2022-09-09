@@ -40,7 +40,7 @@ test:
   imports:
     - pyautogui  # [not linux]
   commands:
-    - DISPLAY=localhost: 1.0 xvfb-run python -c "import pyautogui"  # [linux]
+    - DISPLAY=localhost:1.0 xvfb-run python -c "import pyautogui"  # [linux]
     - pytest -vvv --capture=tee-sys -k "not TestKeyboard" tests
   requires:
     - pip
