@@ -10,6 +10,7 @@ source:
   sha256: d31de8f712218d90be7fc98091fce1a12a3e9196e0c814eb9afd73bb2ec97035
 
 build:
+  skip: True  # [py>38]
   number: 0
   script:
     - {{ PYTHON }} -m pip install . -vv    # [not linux]
@@ -40,7 +41,7 @@ test:
     - pyautogui  # [not linux]
   commands:
     - DISPLAY=localhost: 1.0 xvfb-run python -c "import pyautogui"  # [linux]
-    - pytest -vvv --capture=tee-sys tests
+    - pytest -vvv --capture=tee-sys -k "not TestKeyboard" tests
   requires:
     - pip
     - pytest
