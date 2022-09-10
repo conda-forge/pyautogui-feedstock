@@ -42,7 +42,9 @@ test:
   commands:
     - export DISPLAY=:99  # [linux]
     - xvfb-run python -c "import mouseinfo"  &  # [linux]
-    - pytest -vvv --capture=tee-sys -k "not TestKeyboard and not TestPyScreezeFunctions and not test__normalizeXYArgs" tests
+    - pytest -vvv --capture=tee-sys -k "not TestKeyboard and not TestPyScreezeFunctions and not test__normalizeXYArgs" tests  # [win]
+    - pytest -vvv --capture=tee-sys -k "not TestKeyboard and not TestPyScreezeFunctions and not test__normalizeXYArgs and not TestMouse and not TestFailSafe" tests  # [linux]
+    - pytest -vvv --capture=tee-sys -k "not TestKeyboard and not TestPyScreezeFunctions and not test__normalizeXYArgs and not test_pause" tests  # [osx]
   requires:
     - pip
     - pytest
