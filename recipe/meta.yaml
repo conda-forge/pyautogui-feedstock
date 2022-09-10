@@ -40,8 +40,8 @@ test:
   imports:
     - pyautogui  # [not linux]
   commands:
-    # - export DISPLAY=localhost:1.0  # [linux]
-    - xvfb-run --auto-servernum python -c "import mouseinfo"  &  # [linux]
+    - export DISPLAY=:99  # [linux]
+    - xvfb-run python -c "import mouseinfo"  &  # [linux]
     - pytest -vvv --capture=tee-sys -k "not TestKeyboard and not TestPyScreezeFunctions and not test__normalizeXYArgs" tests
   requires:
     - pip
