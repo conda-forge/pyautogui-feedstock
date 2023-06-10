@@ -14,7 +14,7 @@ build:
   number: 0
   script:
     - {{ PYTHON }} -m pip install . -vv    # [not linux]
-    - DISPLAY=localhost: 1.0 xvfb-run {{ PYTHON }} -m pip install . -vv  # [linux]
+    - "DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv"  # [linux]
 
 requirements:
   host:
@@ -31,7 +31,7 @@ requirements:
     - pyobjc-framework-quartz  # [osx]
     - pyscreeze >=0.1.21
     - python
-    - pytweening >=1.0.1
+    - pytweening >=1.0.4
     - python-xlib
 
 test:
