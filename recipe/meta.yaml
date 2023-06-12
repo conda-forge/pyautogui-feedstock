@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py<36]
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv    # [not linux]
     - "DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv"  # [linux]
