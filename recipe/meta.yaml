@@ -22,6 +22,7 @@ requirements:
     - python
     - python-xlib  # [linux]
     - pyobjc-framework-quartz  # [osx]
+    - setuptools
 
   run:
     - mouseinfo
