@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyAutoGUI-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/PyAutoGUI-{{ version }}.tar.gz
   sha256: dd1d29e8fd118941cb193f74df57e5c6ff8e9253b99c7b04f39cfc69f3ae04b2
 
 build:
   skip: true  # [py<36]
-  number: 3
+  number: 4
   script:
     - {{ PYTHON }} -m pip install . -vv    # [not linux]
     - "DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv"  # [linux]
