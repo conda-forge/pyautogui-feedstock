@@ -11,19 +11,21 @@ source:
 
 build:
   skip: true  # [py<36]
-  number: 4
+  number: 5
   script:
     - {{ PYTHON }} -m pip install . -vv    # [not linux]
     - "DISPLAY=localhost:1.0 xvfb-run {{ PYTHON }} -m pip install . -vv"  # [linux]
 
 requirements:
+  build:
+    - python                              # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
   host:
     - pip
     - python
     - python-xlib  # [linux]
     - pyobjc-framework-quartz  # [osx]
     - setuptools
-
   run:
     - mouseinfo
     - pygetwindow >=0.0.5  # [not linux]
@@ -33,7 +35,7 @@ requirements:
     - pyscreeze >=0.1.21
     - python
     - pytweening >=1.0.4
-    - python-xlib
+    - python-xlib  # [linux]
 
 test:
 # Disabling test suite for now so many of them requires 
